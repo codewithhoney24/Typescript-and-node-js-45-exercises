@@ -89,7 +89,7 @@ let _message1 = `${famous_person} once said, ${qoute1}`;
 console.log(_message); 
 
 
-console.log("Hello World !");
+
 
 
 
