@@ -1,3 +1,5 @@
+import inquirer from "inquirer";
+import chalk from "chalk";
 // FIRST AND SIMPLE PROGRAM.
 console.log("Hello World !");
 
@@ -234,6 +236,19 @@ for(let i = 0 ; i <  transportation .length ; i++){
 
 let guest_list1 : string[] = ['Ali','Imran','Nawaz','Amir'];
 
+//  Print the name of the guest who can make dinner.
+let unableAttend : string | undefined = guest_list1.splice(1,1)[0];
+console.log(`${unableAttend} not invited for dinner`);
+// push the guest
+ guest_list1.push("owais khan");
+
+//  print the guest.... for message
+guest_list1.forEach(guest =>{
+    console.log(`\nDear Mr. ${guest}, \n you are cordially invite in our party for dinner. \nTank You!\n`);
+
+}) ;
+
+// OR****************************************************************
 for(let i = 0 ; i <  guest_list1.length ; i++){
    console.log('Dear Mr.' + guest_list1[i] + ', \n\nIt is our pleasure to invite you in our party for dinner.\n\nTank You!\n\n');
 }
@@ -320,7 +335,7 @@ while(Guest_List.length > 2){
     let remove_Guest = Guest_List.pop();
     console.log(`Sorry Mr. ${remove_Guest}, you are not invited for Dinner.`); 
 }
-// REMAING 2 INVITED GUEST
+// REMAINING 2 INVITED GUEST
 for(let i = 0 ; i <  Guest_List.length ; i++){
     console.log('\nDear Mr.' + Guest_List[i] + ', \n\nYou are still invited.\n\nTank You!\n\n');
     }
